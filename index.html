@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Tendencias Climáticas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Dashboard de Clima Personalizado</h1>
+    </header>
+
+    <main>
+        <section class="search-box">
+            <input type="text" id="cityInput" placeholder="Introduce una ciudad (ej. Madrid)">
+            <button id="searchBtn">Buscar</button>
+        </section>
+
+        <section id="loadingArea" class="status-container" style="display: none;">
+            <div class="spinner"></div>
+            <p>Cargando datos... Porfavor espere.</p>
+        </section>
+
+        <section id="chartContainer" class="chart-wrapper" style="display: none;">
+            <div class="canvas-container">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="color-key">
+                <span class="key-item"><span class="dot red"></span> TEMP > 30°C</span>
+                <span class="key-item"><span class="dot blue"></span> TEMP < 10°C</span>
+            </div>
+        </section>
+
+        <section id="errorMessage" class="error-msg" style="display: none;"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

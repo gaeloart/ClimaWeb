@@ -1,0 +1,93 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    background-color: #333333;
+    padding: 1rem;
+    border-bottom: 1px solid #666666;
+    margin-bottom: 1rem;
+}
+
+/* Buscador */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #666666;
+    outline: none;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #666666;
+    color: #ffffff;
+    border: 1px solid #666666;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #999999;
+}
+
+/* Contenedor de la Gráfica (Control de tamaño) */
+.chart-wrapper {
+    background: #333333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.canvas-container {
+    position: relative;
+    height: 400px; /* Altura fija para evitar crecimiento infinito */
+    width: 100%;
+}
+
+/* Spinner de carga */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #666666;
+    border-top: 4px solid #ffffff;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Leyenda de colores */
+.color-key {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.red { background-color: #ff0000; }
+.blue { background-color: #0000ff; }
+
+.error-msg {
+    color: #ff0000;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
